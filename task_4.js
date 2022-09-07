@@ -26,7 +26,10 @@ function Device(power) {
 
 
 const lamp = new Device(50);
+lamp.colorTemp = "Warm"
+
 const pc = new Device(500);
+pc.memoryInGb = 8
 
 console.log(lamp.isTurnedOn())
 console.log(pc.isTurnedOn())
@@ -35,3 +38,5 @@ lamp.turnOn()
 
 console.log(lamp.isTurnedOn())
 console.log(pc.isTurnedOn())
+
+console.log(pc.memoryInGb)
