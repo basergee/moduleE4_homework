@@ -55,6 +55,8 @@ console.log('Лампа включена? ' + lamp.isTurnedOn())
 console.log('Компьютер включен? ' + pc.isTurnedOn())
 console.log(pc.memoryInGb)
 
+console.log('------------------------')
+
 console.log('Включим лампу')
 lamp.turnOn()
 
@@ -63,6 +65,8 @@ console.log(calcPower(devices));
 
 console.log('Лампа включена? ' + lamp.isTurnedOn())
 console.log('Компьютер включен? ' + pc.isTurnedOn())
+
+console.log('------------------------')
 
 console.log('Включим компьютер')
 pc.turnOn()
