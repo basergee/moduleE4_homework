@@ -85,10 +85,9 @@ console.log('Включим лампу')
 lamp.turnOn()
 
 // узнаем потребляемую мощность устройств
-console.log(calcPower(devices));
-
 console.log('Лампа включена? ' + lamp.isTurnedOn())
 console.log('Компьютер включен? ' + pc.isTurnedOn())
+console.log(calcPower(devices));
 
 console.log('------------------------')
 
