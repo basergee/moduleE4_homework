@@ -50,22 +50,24 @@ pc.memoryInGb = 8
 // сложим все объекты в массив
 const devices = [lamp, pc];
 
-// проверим состояние некоторых объектов
-console.log(lamp.isTurnedOn())
-console.log(pc.isTurnedOn())
+console.log('Проверим состояние некоторых объектов')
+console.log('Лампа включена? ' + lamp.isTurnedOn())
+console.log('Компьютер включен? ' + pc.isTurnedOn())
 console.log(pc.memoryInGb)
 
-// включим лампу
+console.log('Включим лампу')
 lamp.turnOn()
 
 // узнаем потребляемую мощность устройств
 console.log(calcPower(devices));
 
-console.log(lamp.isTurnedOn())
-console.log(pc.isTurnedOn())
+console.log('Лампа включена? ' + lamp.isTurnedOn())
+console.log('Компьютер включен? ' + pc.isTurnedOn())
 
-// включим компьютер
+console.log('Включим компьютер')
 pc.turnOn()
 
 // узнаем потребляемую мощность устройств
+console.log('Лампа включена? ' + lamp.isTurnedOn())
+console.log('Компьютер включен? ' + pc.isTurnedOn())
 console.log(calcPower(devices));
