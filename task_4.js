@@ -8,20 +8,23 @@
 
 
 function Device(power) {
-    this.power = power,
-    this.isOn = false,
+    this.power = power;
+    this.isOn = false;
+}
 
-    this.turnOn = function() {
-        this.isOn = true;
-    },
 
-    this.turnOff = function() {
-        this.isOn = false;
-    },
+Device.prototype.turnOn = function() {
+    this.isOn = true;
+}
 
-    this.isTurnedOn = function() {
-        return this.isOn;
-    }
+
+Device.prototype.turnOff = function() {
+    this.isOn = false;
+}
+
+
+Device.prototype.isTurnedOn = function() {
+    return this.isOn;
 }
 
 
