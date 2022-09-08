@@ -34,7 +34,7 @@ const calcPower = function(devices) {
         }
     }
 
-    return p;
+    return `Потребляемая мощность ${p} кВт`;
 }
 
 // определим объекты
