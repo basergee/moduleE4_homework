@@ -50,10 +50,15 @@ pc.memoryInGb = 8
 // сложим все объекты в массив
 const devices = [lamp, pc];
 
+console.log('Выведем свойства объектов')
+console.log('Свет лампы: ' + lamp.colorTemp)
+console.log('Объем памяти компьютера: ' + pc.memoryInGb + 'Гб')
+
+console.log('------------------------')
+
 console.log('Проверим состояние некоторых объектов')
 console.log('Лампа включена? ' + lamp.isTurnedOn())
 console.log('Компьютер включен? ' + pc.isTurnedOn())
-console.log(pc.memoryInGb)
 
 console.log('------------------------')
 
