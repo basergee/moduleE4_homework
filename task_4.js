@@ -51,6 +51,10 @@ function Lamp(power, colorTemp) {
 
 Lamp.prototype = new Device();
 
+Lamp.prototype.getColorTemp = function() {
+    console.log('Свет лампы: ' + this.colorTemp);
+}
+
 
 function Computer(power, memorySizeInGb) {
     this.power = power;
@@ -58,6 +62,10 @@ function Computer(power, memorySizeInGb) {
 }
 
 Computer.prototype = new Device();
+
+Computer.prototype.getMemSize = function() {
+    console.log('Объем памяти компьютера: ' + this.memorySizeInGb + 'Гб');
+}
 
 
 // определим объекты
@@ -68,9 +76,9 @@ const pc = new Computer(500, 8);
 // сложим все объекты в массив
 const devices = [lamp, pc];
 
-console.log('Выведем свойства объектов')
-console.log('Свет лампы: ' + lamp.colorTemp)
-console.log('Объем памяти компьютера: ' + pc.memorySizeInGb + 'Гб')
+console.log('Выведем свойства объектов');
+lamp.getColorTemp();
+pc.getMemSize();
 
 console.log('------------------------')
 
