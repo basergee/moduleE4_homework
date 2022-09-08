@@ -40,19 +40,37 @@ const calcPower = function(devices) {
     return `Потребляемая мощность ${p} кВт`;
 }
 
-// определим объекты
-const lamp = new Device(50);
-lamp.colorTemp = "Warm"
 
-const pc = new Device(500);
-pc.memoryInGb = 8
+// создадим классы-наследники: лампа и компьютер
+
+
+function Lamp(power, colorTemp) {
+    this.power = power;
+    this.colorTemp = colorTemp;
+}
+
+Lamp.prototype = new Device();
+
+
+function Computer(power, memorySizeInGb) {
+    this.power = power;
+    this.memorySizeInGb = memorySizeInGb;
+}
+
+Computer.prototype = new Device();
+
+
+// определим объекты
+const lamp = new Lamp(50, "Warm");
+
+const pc = new Computer(500, 8);
 
 // сложим все объекты в массив
 const devices = [lamp, pc];
 
 console.log('Выведем свойства объектов')
 console.log('Свет лампы: ' + lamp.colorTemp)
-console.log('Объем памяти компьютера: ' + pc.memoryInGb + 'Гб')
+console.log('Объем памяти компьютера: ' + pc.memorySizeInGb + 'Гб')
 
 console.log('------------------------')
 
